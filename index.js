@@ -1,29 +1,19 @@
 import { menuArray } from "./data.js";
+const menuEl = document.getElementById("menu");
 
-function getFeedHtml() {
-  let feedHtml = "";
-
-  menuArray.forEach(function (menu) {
-    feedHtml += `<div class="menu">
+// Menu options
+menuArray.forEach(function (item) {
+  menuEl.innerHTML += `<div class="menu">
         <div>
-            <div class="emoji">${menu.emoji}</div>
+            <div class="emoji">${item.emoji}</div>
         </div>
         <div class="info">
-            <p class= "item-name">${menu.name}</p>
-            <p class= "ingredients">${menu.ingredients}</p>
-            <p class= "price">$${menu.price}</p>
+            <p class= "item-name">${item.name}</p>
+            <p class= "ingredients">${item.ingredients}</p>
+            <p class= "price">$${item.price}</p>
         </div>
         <div>
-            <button>+</button>
+            <button class="addBtn" data-add="${item.id}">+</button>
         </div>
     </div>`;
-  });
-
-  return feedHtml;
-}
-
-function render() {
-  document.getElementById("feed").innerHTML = getFeedHtml();
-}
-
-render();
+});

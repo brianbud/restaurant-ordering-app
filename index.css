@@ -1,25 +1,26 @@
 body {
+    display: flex;
+    justify-content: center;
     margin: 0;
     font-family: 'Smythe', cursive;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menu, .order {
+    width: 100%;
+    margin: 0 auto;
 }
 
-section {
+#menu {
+    padding: 20px;
     max-width: 600px;
 }
 
 .menu {
-    width: 500px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 40px;
-    padding-bottom: 40px;
+    margin-top: 20px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #D2D2D2;
 }
 
@@ -51,7 +52,7 @@ section {
     font-size: 20px;
 }
 
-button {
+.addBtn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -60,4 +61,18 @@ button {
     cursor: pointer;
     font-size: 32px;
     font-family: 'Inter', sans-serif;
+}
+
+.order {
+
+}
+
+.order-title {
+    margin: 0;
+    text-align: center;
+}
+
+.order-list {
+    display: flex;
+    justify-content: space-between;
 }
