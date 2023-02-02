@@ -64,9 +64,48 @@ body {
 }
 
 .order-list {
+    height: 40px;
+    font-size: 28px;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
-    align-items: center;
     padding: 0 20px;
+    align-items: center;
+}
+
+.remove {
+    display: inline-block;
+    height: 20px;
+    margin-right: auto;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    color: #BBBBBB;
+    cursor: pointer;
+}
+
+.total-price {
+    border-top: 2px solid  #393333;
+    margin-bottom: 40px;
+}
+
+.order-price {
+    font-size: 20px;
+}
+
+.complete-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #16DB99;
+    border: none;
+    margin-bottom: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.complete-btn:hover{
+ background-color: #04ffab;
 }

@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js";
 const menuEl = document.getElementById("menu");
 const orderEl = document.getElementById("order");
+const completeEl = document.getElementById("complete-order");
 let orderArray = [];
 let allPrices = [];
 
@@ -30,6 +31,7 @@ document.addEventListener("click", function (e) {
 
   showOrder(orderArray);
   showTotalPrice(allPrices);
+  completeOrder();
 });
 
 function showOrder(arr) {
@@ -38,9 +40,9 @@ function showOrder(arr) {
   arr.forEach(function (item) {
     orderHtml += `
     <div class= "order-list">
-        <p>${item.name}</p>
+        <p class="order-name">${item.name}</p>
         <button class="remove">remove</button>
-        <p>$${item.price}</p>
+        <p class="order-price">$${item.price}</p>
     </div>
     `;
   });
@@ -58,4 +60,9 @@ function showTotalPrice(arr) {
   </div>
   `;
   orderEl.innerHTML += totalPriceHtml;
+}
+
+function completeOrder() {
+  completeEl.innerHTML = `
+  <button class="complete-btn">Complete Order</button>`;
 }
