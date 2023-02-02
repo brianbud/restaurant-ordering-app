@@ -1,7 +1,10 @@
 import { menuArray } from "./data.js";
 const menuEl = document.getElementById("menu");
+const orderEl = document.getElementById("order");
+let orderArray = [];
+let allPrices = [];
 
-// Menu options
+// Display Menu Options
 menuArray.forEach(function (item) {
   menuEl.innerHTML += `<div class="menu">
         <div>
@@ -17,3 +20,35 @@ menuArray.forEach(function (item) {
         </div>
     </div>`;
 });
+
+//Event Listeners
+document.addEventListener("click", function (e) {
+  if (e.target.dataset.add) {
+    orderArray.push(menuArray[e.target.dataset.add]);
+    allPrices.push(menuArray[e.target.dataset.add].price);
+  }
+
+  showOrder(orderArray);
+  showTotalPrice(allPrices);
+});
+
+function showOrder(arr) {
+  let orderHtml = "";
+
+  arr.forEach(function (item) {
+    orderHtml += `
+    <div class= "order-list">
+        <p>${item.name}</p>
+        <button class="remove">remove</button>
+        <p>$${item.price}</p>
+    </div>
+    `;
+  });
+
+  orderEl.innerHTML = orderHtml;
+}
+
+function showTotalPrice(arr) {
+  console.log("line 51");
+  console.log(arr);
+}

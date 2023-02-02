@@ -63,16 +63,10 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.order {
-
-}
-
-.order-title {
-    margin: 0;
-    text-align: center;
-}
-
 .order-list {
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
+    align-items: center;
+    padding: 0 20px;
 }
