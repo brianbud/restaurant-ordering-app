@@ -49,6 +49,13 @@ function showOrder(arr) {
 }
 
 function showTotalPrice(arr) {
-  console.log("line 51");
-  console.log(arr);
+  let totalPriceHtml = "";
+  let total = arr.reduce((a, b) => a + b, 0);
+  totalPriceHtml = `
+  <div class= "order-list total-price">
+    <p>Total Price</p>
+    <p>$${total}</p>
+  </div>
+  `;
+  orderEl.innerHTML += totalPriceHtml;
 }
