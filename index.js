@@ -4,14 +4,14 @@ function getFeedHtml() {
   let feedHtml = "";
 
   menuArray.forEach(function (menu) {
-    feedHtml += `<div>
+    feedHtml += `<div class="menu">
         <div>
-            ${menu.emoji}
+            <div class="emoji">${menu.emoji}</div>
         </div>
-        <div>
-            <h2>${menu.name}<h2>
-            <p>${menu.ingredients}</p>
-            <p>$${menu.price}</p>
+        <div class="info">
+            <p class= "item-name">${menu.name}</p>
+            <p class= "ingredients">${menu.ingredients}</p>
+            <p class= "price">$${menu.price}</p>
         </div>
         <div>
             <button>+</button>

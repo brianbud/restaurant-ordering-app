@@ -8,5 +8,45 @@ main {
     align-items: center;
 }
 
+section {
+    max-width: 600px;
+    border: 2px solid green;
+}
 
+.menu {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #D2D2D2;
+}
 
+.emoji {
+    font-size: 70px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: auto;
+}
+
+.info > p {
+    margin: 0;
+}
+
+.item-name {
+    font-size: 28px;
+}
+
+.ingredients {
+    color: #8B8B8B;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 20px;
+}
