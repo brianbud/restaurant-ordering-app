@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Smythe', cursive;
 }
 
 main {
@@ -10,7 +11,6 @@ main {
 
 section {
     max-width: 600px;
-    border: 2px solid green;
 }
 
 .menu {
@@ -19,7 +19,7 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     margin: 40px;
-    padding: 20px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #D2D2D2;
 }
 
@@ -49,4 +49,15 @@ section {
 
 .price {
     font-size: 20px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #DEDEDE;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
 }
