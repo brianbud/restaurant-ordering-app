@@ -3,6 +3,8 @@ const menuEl = document.getElementById("menu");
 const orderEl = document.getElementById("order");
 const totalEl = document.getElementById("total");
 const completeEl = document.getElementById("complete-order");
+const creditCardForm = document.getElementById("credit-card-form");
+
 let orderArray = [];
 let allPrices = [];
 
@@ -78,4 +80,12 @@ function completeOrder() {
 
 completeEl.addEventListener("click", function () {
   document.getElementById("card").classList.toggle("hidden");
+});
+
+creditCardForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const creditCardFormData = new FormData(creditCardForm);
+  const fullName = creditCardFormData.get("name");
+  console.log(`your order is on its way ${fullName}`);
 });
