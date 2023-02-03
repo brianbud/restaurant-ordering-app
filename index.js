@@ -25,13 +25,13 @@ menuArray.forEach(function (item) {
 //Event Listeners
 document.addEventListener("click", function (e) {
   if (e.target.dataset.add) {
+    console.log(e);
     orderArray.push(menuArray[e.target.dataset.add]);
     allPrices.push(menuArray[e.target.dataset.add].price);
+    showOrder(orderArray);
+    showTotalPrice(allPrices);
+    completeOrder();
   }
-
-  showOrder(orderArray);
-  showTotalPrice(allPrices);
-  completeOrder();
 });
 
 function showOrder(arr) {
