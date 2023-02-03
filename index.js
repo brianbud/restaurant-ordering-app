@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js";
 const menuEl = document.getElementById("menu");
 const orderEl = document.getElementById("order");
+const totalEl = document.getElementById("total");
 const completeEl = document.getElementById("complete-order");
 let orderArray = [];
 let allPrices = [];
@@ -25,12 +26,19 @@ menuArray.forEach(function (item) {
 //Event Listeners
 document.addEventListener("click", function (e) {
   if (e.target.dataset.add) {
-    console.log(e);
     orderArray.push(menuArray[e.target.dataset.add]);
     allPrices.push(menuArray[e.target.dataset.add].price);
     showOrder(orderArray);
     showTotalPrice(allPrices);
     completeOrder();
+  } else if (e.target.dataset.remove) {
+    let removedItem = e.target.dataset.remove;
+    console.log("removed item:", removedItem);
+    let itemIndex = orderArray.findIndex((item) => item.id == removedItem);
+    orderArray.splice(itemIndex, 1);
+    allPrices = allPrices.filter((price, index) => index != itemIndex);
+    e.target.parentNode.remove();
+    showTotalPrice(allPrices);
   }
 });
 
@@ -41,7 +49,7 @@ function showOrder(arr) {
     orderHtml += `
     <div class= "order-list">
         <p class="order-name">${item.name}</p>
-        <button class="remove">remove</button>
+        <button class="remove" data-remove= "${item.id}">remove</button>
         <p class="order-price">$${item.price}</p>
     </div>
     `;
@@ -51,6 +59,7 @@ function showOrder(arr) {
 }
 
 function showTotalPrice(arr) {
+  console.log(arr);
   let totalPriceHtml = "";
   let total = arr.reduce((a, b) => a + b, 0);
   totalPriceHtml = `
@@ -59,7 +68,7 @@ function showTotalPrice(arr) {
     <p>$${total}</p>
   </div>
   `;
-  orderEl.innerHTML += totalPriceHtml;
+  totalEl.innerHTML = totalPriceHtml;
 }
 
 function completeOrder() {
