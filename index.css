@@ -1,8 +1,26 @@
 body {
-    display: flex;
-    justify-content: center;
+    width: 100%;
     margin: 0;
     font-family: 'Smythe', cursive;
+}
+
+main{
+    max-width: 600px;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    color: white;
+    background-image: url(images/bg-img.png);
+    background-repeat: no-repeat;
+    max-width: 600px;
+    width: 100%;
+    background-position: center right;
+    background-size: cover;
+    padding: 10px 30px;
+
 }
 
 .menu, .order {
@@ -85,23 +103,28 @@ body {
 
 .total-price {
     border-top: 2px solid  #393333;
-    margin-bottom: 40px;
+    margin: 10px 20px;
+
 }
 
 .order-price {
     font-size: 20px;
 }
 
+#complete-order {
+    display: flex;
+    justify-content: center;
+}
+
 .complete-btn {
+    width: 90%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     font-size: 16px;
-    width: 100%;
     padding: 20px;
     color: white;
     background-color: #16DB99;
     border: none;
-    margin-bottom: 40px;
     cursor: pointer;
     border-radius: 3px;
 }

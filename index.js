@@ -75,3 +75,7 @@ function completeOrder() {
   completeEl.innerHTML = `
   <button class="complete-btn">Complete Order</button>`;
 }
+
+completeEl.addEventListener("click", function () {
+  console.log("line 80");
+});
