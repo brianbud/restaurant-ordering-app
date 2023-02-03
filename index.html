@@ -24,6 +24,33 @@
       <section id="total" class="order-summary"></section>
       <section id="complete-order" class="order-summary"></section>
     </main>
+    <div id="card" class="hidden">
+      <h2>Enter card details</h2>
+      <form id="credit-card-form">
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          aria-label="name"
+          required
+        />
+        <input
+          type="number"
+          name="card-num"
+          placeholder="Enter card number"
+          aria-label="enter card number"
+          required
+        />
+        <input
+          type="number"
+          name="cvv"
+          placeholder="Enter CVV"
+          aria-label="enter CVV num found at the back of your Credit card"
+          required
+        />
+        <button class="submit-btn">Pay</button>
+      </form>
+    </div>
     <script src="index.js" type="module"></script>
   </body>
 </html>

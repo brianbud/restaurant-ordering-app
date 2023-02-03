@@ -77,5 +77,5 @@ function completeOrder() {
 }
 
 completeEl.addEventListener("click", function () {
-  console.log("line 80");
+  document.getElementById("card").classList.toggle("hidden");
 });
