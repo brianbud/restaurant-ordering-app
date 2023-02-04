@@ -16,8 +16,7 @@ header{
     color: white;
     background-image: url(images/bg-img.png);
     background-repeat: no-repeat;
-    max-width: 500px;
-    width: 100%;
+    max-width: 100%;
     background-position: center right;
     background-size: cover;
     padding: 10px 30px;
@@ -185,4 +184,16 @@ input {
     color: white;
     border: none;
     font-weight: 700;
+}
+
+#delivery-status {
+    display: none;
+    width: 90%;
+    color: #065F46;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #ECFDF5;
+    border: none;
+    border-radius: 3px;
 }

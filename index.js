@@ -87,5 +87,16 @@ creditCardForm.addEventListener("submit", function (e) {
 
   const creditCardFormData = new FormData(creditCardForm);
   const fullName = creditCardFormData.get("name");
-  console.log(`your order is on its way ${fullName}`);
+
+  document.getElementById("card").classList.toggle("hidden");
+  showDeliveryStatus(fullName);
 });
+
+function showDeliveryStatus(name) {
+  orderEl.innerHTML = "";
+  completeEl.innerHTML = "";
+  totalEl.innerHTML = "";
+  const statusEl = document.getElementById("delivery-status");
+  statusEl.style.display = "block";
+  statusEl.innerHTML = `Thanks, ${name}! Your order is on its way!`;
+}
