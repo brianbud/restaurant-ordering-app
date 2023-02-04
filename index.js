@@ -1,4 +1,5 @@
 import { menuArray } from "./data.js";
+
 const menuEl = document.getElementById("menu");
 const orderEl = document.getElementById("order");
 const totalEl = document.getElementById("total");
@@ -26,6 +27,7 @@ menuArray.forEach(function (item) {
 });
 
 //Event Listeners
+
 document.addEventListener("click", function (e) {
   if (e.target.dataset.add) {
     orderArray.push(menuArray[e.target.dataset.add]);
