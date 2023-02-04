@@ -37,7 +37,6 @@ document.addEventListener("click", function (e) {
     completeOrder();
   } else if (e.target.dataset.remove) {
     let removedItem = e.target.dataset.remove;
-    console.log("removed item:", removedItem);
     let itemIndex = orderArray.findIndex((item) => item.id == removedItem);
     orderArray.splice(itemIndex, 1);
     allPrices = allPrices.filter((price, index) => index != itemIndex);
@@ -63,7 +62,6 @@ function showOrder(arr) {
 }
 
 function showTotalPrice(arr) {
-  console.log(arr);
   let totalPriceHtml = "";
   let total = arr.reduce((a, b) => a + b, 0);
   totalPriceHtml = `
