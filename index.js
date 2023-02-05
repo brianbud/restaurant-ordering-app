@@ -99,4 +99,11 @@ function showDeliveryStatus(name) {
   const statusEl = document.getElementById("delivery-status");
   statusEl.style.display = "block";
   statusEl.innerHTML = `Thanks, ${name}! Your order is on its way!`;
+  resetOrder();
+}
+
+function resetOrder() {
+  orderArray = [];
+  allPrices = [];
+  console.log("new item");
 }
