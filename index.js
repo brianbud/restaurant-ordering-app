@@ -22,7 +22,7 @@ menuArray.forEach(function ({ emoji, name, ingredients, price, id }) {
             <p class= "price">$${price}</p>
         </div>
         <div>
-            <button class="addBtn" data-add="${id}">+</button>
+            <button class="add-btn" data-add="${id}">+</button>
         </div>
     </div>`;
 });
