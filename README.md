@@ -18,6 +18,16 @@
 
 **Tech used:** HTML, CSS, JAVASCRIPT
 
+## Challenges
+
+While working on a project, I encountered several challenges. The main issue I faced was updating the total price after removing an item from the order. There were two arrays, one for the order items and another for the prices. When a meal was added, the price was pushed into the price array. To remove an item, I used a combination of array methods to accomplish the task.
+
+The first step was to identify the correct element in the price array to remove. I used the findIndex() method to find the index of the element in the array. Next, I used splice(itemIndex, 1) to remove the element at that index from the price array.
+
+To keep only the prices I needed, I used filter() method to filter the array. Lastly, I used the reduce() method to find the sum of the remaining prices in the array, which gave me the updated total price.
+
+It was interesting to use all these array methods in solving the challenge.
+
 Quick start:
 
 ```
