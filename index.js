@@ -11,18 +11,18 @@ let orderArray = [];
 let allPrices = [];
 
 // Display Menu Options
-menuArray.forEach(function (item) {
+menuArray.forEach(function ({ emoji, name, ingredients, price, id }) {
   menuEl.innerHTML += `<div class="menu">
         <div>
-            <div class="emoji">${item.emoji}</div>
+            <div class="emoji">${emoji}</div>
         </div>
         <div class="info">
-            <p class= "item-name">${item.name}</p>
-            <p class= "ingredients">${item.ingredients}</p>
-            <p class= "price">$${item.price}</p>
+            <p class= "item-name">${name}</p>
+            <p class= "ingredients">${ingredients}</p>
+            <p class= "price">$${price}</p>
         </div>
         <div>
-            <button class="addBtn" data-add="${item.id}">+</button>
+            <button class="addBtn" data-add="${id}">+</button>
         </div>
     </div>`;
 });
@@ -52,12 +52,12 @@ document.addEventListener("click", function (e) {
 function showOrder(arr) {
   let orderHtml = "";
 
-  arr.forEach(function (item) {
+  arr.forEach(function ({ name, id, price }) {
     orderHtml += `
     <div class= "order-list">
-        <p class="order-name">${item.name}</p>
-        <button class="remove" data-remove= "${item.id}">remove</button>
-        <p class="order-price">$${item.price}</p>
+        <p class="order-name">${name}</p>
+        <button class="remove" data-remove= "${id}">remove</button>
+        <p class="order-price">$${price}</p>
     </div>
     `;
   });
