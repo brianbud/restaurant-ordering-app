@@ -1,5 +1,7 @@
 # Restaurant Ordering App
 
+A simple online food ordering system that allows users to view menu options, add items to their order, remove items, and complete their order with a credit card form that displays a delivery status upon submission.
+
 ![ordering pizza and hamburder on a resturant app and filling out form](./images/orderingapp.gif)
 
 **Link to project:** https://restaurant-ordering-app-brianbud.netlify.app/
