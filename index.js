@@ -5,6 +5,7 @@ const orderEl = document.getElementById("order");
 const totalEl = document.getElementById("total");
 const completeEl = document.getElementById("complete-order");
 const creditCardForm = document.getElementById("credit-card-form");
+const statusEl = document.getElementById("delivery-status");
 
 let orderArray = [];
 let allPrices = [];
@@ -29,6 +30,9 @@ menuArray.forEach(function (item) {
 //Event Listeners
 
 document.addEventListener("click", function (e) {
+  if ((statusEl.style.display = "block")) {
+    statusEl.style.display = "none";
+  }
   if (e.target.dataset.add) {
     orderArray.push(menuArray[e.target.dataset.add]);
     allPrices.push(menuArray[e.target.dataset.add].price);
@@ -96,7 +100,6 @@ function showDeliveryStatus(name) {
   orderEl.innerHTML = "";
   completeEl.innerHTML = "";
   totalEl.innerHTML = "";
-  const statusEl = document.getElementById("delivery-status");
   statusEl.style.display = "block";
   statusEl.innerHTML = `Thanks, ${name}! Your order is on its way!`;
   resetOrder();
